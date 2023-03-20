@@ -1,0 +1,157 @@
+@import url('../../node_modules/font-awesome/css/font-awesome.min.css');
+
+body{
+    background-color: #eee;
+}
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+.dash-main{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-menu{
+    position: fixed;
+    top: 0.1em;
+    left: 0.3em;
+    bottom: 0.3em;
+    height: 100vh;
+    width: 20%;
+    border-radius: 20px;
+    background-image: -moz-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
+    background-image: -webkit-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
+    background-image: -ms-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
+    align-items: center;
+}
+
+.left-bottom{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    align-items: center;
+}
+
+.right-menu{
+    position: fixed;
+    top: 0.2em;
+    right: 0.3em;
+    height: 100vh;
+    width: 20%;
+    background-color: rgb(225, 218, 247);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: height, width 1s;
+}
+
+.dash-logo{
+    height: 4.5em;
+    width: 100%;    
+}
+
+.setting-div{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    bottom: 0;
+}
+
+.setting-div i{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.left-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.left-bottom a i{
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+.top-div{
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+    margin-top: 1em;
+    padding: 0.5em 0.5em;
+    background-color: rgba(255, 255, 255, 0.789);
+    justify-content: end;
+    align-items: center;
+}
+
+.top-div > span {
+    margin-left: 2em;
+}
+
+.profile-pic{
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 100%;
+    transition: height, width 1s;
+}
+
+.right-bottom{
+    bottom: 0;
+}
+
+.fa-bell{
+    font-size: 1.3rem;
+    margin-left: 2em;
+}
+
+/* .search-engine{
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding-left: .5em;
+} */
+
+/* center content */
+.center-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+    width: 75%;
+    height: 100vh;
+    margin-top: 0.3em;
+
+}
+
+
+@media screen and (max-width: 985px) {
+    .left-menu{
+        display: none;
+    }
+    .center-content{
+        margin-left: 0;
+        width: 79%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .right-menu{
+        height: 3.4em;
+        width: 40%;
+    }
+
+    .top-div{
+        margin-top: 0.5em;
+    }
+
+    .profile-pic{
+        height: 1.4em;
+        width: 1.4em;
+    }
+    .center-content{
+        margin-left: 0;
+        width: 100%;
+    }
+}

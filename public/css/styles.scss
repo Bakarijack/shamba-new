@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,
+::before,
+::after {
+    // padding-top: 43px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    // padding-bottom: 0;
+    // padding-left: 0;
+    // padding-right: 0;
+}
+
+::root {
+    font-size: 10px;
+}
+
+.container {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #F8F5F5;
+    margin: 0 100px;
+    font-family: poppins;
+    p {
+        font-size: 2rem;
+        color: #474747;
+    }
+    h1 {
+        color: #474747;
+        font-size: 55px;
+    }
+    h2 {
+        font-size: 35px;
+        color: #474747;
+        padding-bottom: 43px;
+    }
+    h3 {
+        color: #474747;
+        font-size: 25px;
+        padding: 43px 0 20px;
+    }
+}
+
+// @import url(dashboard.scss);
+// @import url(signup.css);
+// // Header
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-links ul,
+    a {
+        color: #001aff;
+        text-decoration: none;
+        list-style: none;
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        padding: 15px;
+    }
+}
+
+// links hover
+header .header-links ul a:hover {
+    font-weight: 700;
+    border-bottom: #001aff solid 5px;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+    transition-delay: 0.1s;
+    transform: scale(1.05);
+}
+
+// links active
+.header header-links ul a:active {
+    font-weight: 700;
+    border-bottom: #001aff solid 5px;
+}
+
+// header button
+header .container span #signup {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #001aff;
+    color: white;
+    width: 192px;
+    height: 49px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hero {
+    justify-content: space-between;
+}
+
+// hero section
+.hero .container {
+    display: flex;
+    justify-content: space-around;
+    .hero-text {
+        padding: 43px;
+        margin: 0;
+        display: block;
+        .hero-cta {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            input[type="button"] {
+                font-size: 20px;
+                height: 49px;
+                width: 192px;
+                border-radius: 10px;
+                border: none;
+                background-color: #001aff;
+                color: white;
+            }
+            button {
+                border: 2px solid #001aff;
+                width: 192px;
+                height: 49px;
+                border-radius: 10px;
+                font-size: 20px;
+                color: #001aff;
+            }
+        }
+    }
+}
+
+.hero button:hover {
+    cursor: pointer;
+}
+
+section {
+    padding-top: 43px;
+}
+
+// main Info
+main section .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 43px;
+    align-items: flex-end;
+    img {
+        padding-right: 50px;
+    }
+}
+
+.one .container {
+    align-items: center;
+    .texts {
+        padding: 20px;
+    }
+    ul {
+        li {
+            padding: 0 20px;
+            font-size: 20px;
+            color: #474747;
+        }
+    }
+}
+
+.two .container h2 span {
+    border-bottom: #474747 solid 5px;
+}
+
+//Footer Info
+footer {
+    padding-top: 75px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .contact-info h2 {
+        padding-bottom: 43px;
+    }
+    .icons img {
+        justify-content: space-between;
+        padding: 30px;
+    }
+    img {
+        transform: scale(2);
+    }
+    h2 span {
+        border-bottom: #474747 5px solid;
+    }
+}

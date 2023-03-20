@@ -1,0 +1,22 @@
+.adm-header{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 2em;
+}
+
+.adm-email{
+    color: gray;
+}
+
+.box-div{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.box{
+    padding: 0.5em 0.5em;
+    background-color: white;
+    border-radius: 20px;
+    height: 3em;
+}

@@ -1,0 +1,100 @@
+<div class="container-fluid">
+    <div>
+        <h3 class="lp-header">Posted Lands</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 mt-3 search-div">
+                <div class="form">
+                    <i class="fa fa-search"></i>
+                    <input type="text" class="form-control form-input" placeholder="Search anything...">
+                    <span class="left-pan"><i class="fa fa-microphone"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 land-item">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title deed no.</th>
+                        <th scope="col">Land size</th>
+                        <th scope="col">Date of issue</th>
+                        <th scope="col">verification status</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each land_list}}
+                    <tr>
+                        {{#if title_deed_id}}
+                        <th scope="row">{{title_deed_id}}</th>
+                        <td>{{title_num}}</td>
+                        <td>{{land_size}}</td>
+                        <td>{{date_of_issue}}</td>
+                        {{#if is_verified}}
+                        <td><img src="/img/verify4.png"></td>
+                        {{else}}
+                        <td id="{{title_deed_id}}v"><i id="{{title_deed_id}}" class="fa fa-info-circle btn p-0"
+                                onclick="update_verification({{title_deed_id}})"></i>
+                        </td>
+                        {{/if}}
+                        <td><i class="fa fa-trash-alt"></i></td>
+                        {{/if}}
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 land-item">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    async function update_verification(tId) {
+        console.log(tId)
+
+        const result = await fetch('/api/update-td-verification', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                tId,
+                token: localStorage.getItem('token')
+            })
+        }).then(res => res.json())
+
+        console.log(result)
+
+        if (result.status === 'ok') {
+            const t_div = tId + 'v'
+            const td_div = document.getElementById(t_div)
+
+            const i_div = document.getElementById(tId)
+            i_div.remove()
+
+            const img = document.createElement('img')
+            img.setAttribute('src', '/img/verify4.png')
+
+            td_div.append(img)
+
+            Swal.fire(
+                'Verified successfully!',
+                '',
+                'success'
+            )
+        } else if (result.status === 'error') {
+            Swal.fire(
+                'Oops! something went wrong',
+                '',
+                'error'
+            )
+        }
+
+    }
+</script>

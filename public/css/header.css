@@ -1,0 +1,132 @@
+@import url('../../node_modules/font-awesome/css/font-awesome.min.css');
+@import url('../../node_modules/font-awesome/css/font-awesome.min.css');
+
+
+.overlay{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(38, 23, 88);
+}
+
+
+.banner-area{
+    background: url(../img/header_bg.jpg) right;
+    background-repeat: no-repeat;
+    height: 120vh;
+    width: 100%;
+    background-size: 1000px;
+
+}
+
+.banner-area .overlay-bg{
+    opacity: .10;
+    max-width: cover;
+    max-height: fit-content;
+}
+
+.cust-nav{
+    position: fixed;
+    left: 0;
+    right: 15%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo_img{
+    height: 10em;
+    width: 20em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.login{
+    padding: 0.5em 1em;
+    font-weight: bold;
+    margin-left: 1em;
+    font-size: 45px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    
+}
+
+.navbar-nav a{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0%;
+    
+    display: inline-block;
+}
+
+.nav-item:hover{
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+.login:hover{
+
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+.banner-content{
+    margin-top: 15em;
+    z-index: 100;
+}
+
+.head-sts{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: underline;
+    margin-bottom: 30px;
+
+    
+}
+
+.sts-body{
+    padding: 2em;
+    background-color: white;
+    border: 0px solid grey;
+    border-radius: 10px;
+    margin-top: 3em;
+    opacity: .8;
+    
+    
+}
+
+.sts-par{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(23, 58, 99);
+    z-index: 101;
+    word-spacing: normal;
+    text-align: left;
+    
+    
+}
+
+.learn-more-link{
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 600;
+    font-size: .8rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #49e4fa;
+}
+
+.start-btn-div{
+    margin-top: 2em;
+}
+
+.sts-btn{
+    font-size: 2rem;
+    padding: .2em .5em;
+    background-color: #49e4fa;
+}
+

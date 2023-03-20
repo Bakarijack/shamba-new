@@ -1,0 +1,236 @@
+@import url('../../node_modules/font-awesome/css/font-awesome.min.css');
+
+body{
+    background-color: #eee;
+}
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+.dash-main{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-menu{
+    position: fixed;
+    top: 0.1em;
+    left: 0.3em;
+    bottom: 0.3em;
+    height: 100vh;
+    width: 15%;
+    border-radius: 20px;
+    background-image: -moz-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+    background-image: -webkit-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+    background-image: -ms-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+    align-items: center;
+}
+
+.left-bottom{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    align-items: center;
+}
+/* .left-bottom a{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+.left-bottom a:hover{
+    color:blue;
+
+} */
+
+.right-menu{
+    position: fixed;
+    top: 0.2em;
+    right: 0.3em;
+    height: 100vh;
+    width: 20%;
+    background-image: -moz-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+    background-image: -webkit-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+    background-image: -ms-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: height, width 1s;
+
+}
+
+
+.dash-logo{
+    height: 7.5em;
+    width: 100%;    
+}
+
+.setting-div{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    bottom: 0;
+}
+
+.setting-div i{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.left-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.left-bottom a i{
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+.top-div{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-top: 1em;
+    padding: 0.5em 0.5em;
+    background-color: rgba(255, 255, 255, 0.789);
+    justify-content: right;
+    align-items: center;
+    height: 4em;
+}
+
+.top-div > span {
+    margin-left: 2em;
+}
+
+.profile-pic{
+    height: 2.4em;
+    width: 2.4em;
+    margin-right: 1em;
+    transition: height, width 1s;
+    display: none;
+}
+.container .left-bottom i{
+    padding-bottom: 40px; 
+}
+
+.right-bottom{
+    bottom: 0;
+}
+
+.fa-bell{
+    font-size: 1.3rem;
+    margin-left: 2em;
+}
+
+/* .search-engine{
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding-left: .5em;
+} */
+
+/* center content */
+.center-content{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100vh;
+    margin-top: 0.3em;
+    margin-left: 0;
+}
+
+
+@media screen and (max-width: 985px) {
+    .left-menu{
+        display: none;
+    }
+    .center-content{
+        margin-left: 0;
+        width: 79%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .right-menu{
+        height: 3.4em;
+        width: 40%;
+    }
+
+    .bottom-div{
+        display: none;
+    }
+
+    .top-div{
+        margin-top: 0.2em;
+    }
+
+    .profile-pic{
+        height: 2em;
+        width: 3.4em;
+        display: inline-block;
+    }
+    .center-content{
+        margin-left: 0;
+        width: 100%;
+    }
+    .bottom-divt{
+        background-image: -moz-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+        background-image: -webkit-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+        background-image: -ms-linear-gradient(0deg, #ADF7F2 0%, #15AAFF 100%);
+    }
+}
+
+.left-bottom a{
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: baseline;
+    color: white;
+    font-weight: 600;
+}
+
+.left-bottom a:hover{
+    color: blue;
+}
+
+.bottom-div-1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    justify-content: center;
+}
+
+.bottom-div-1 a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-left: 1em;
+}
+
+.bottom-div-1 a i{
+    color: white;
+}
+
+.bottom-div-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.logout{
+    color: white;
+    font-size: 2em;
+}
+
+.setting{
+    color: white;
+    font-size: 2em;
+    margin-top: 2em;
+}
+

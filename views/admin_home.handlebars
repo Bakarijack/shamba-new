@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <h1 class="adm-header">Welcome, <span id="username"></span></h1>
+            <p class="adm-email" id="user_email"></p>
+        </div>
+    </div>
+</div>
+<!--<div class="container-fluid">
+    <div class="row box-div">
+        <div class="col-lg-3 col-md-6 col-sm-12 box first-box"></div>
+        <div class="col-lg-3 col-md-6 col-sm-12 box"></div>
+        <div class="col-lg-3 col-md-6 col-sm-12 box"></div>
+        <div class="col-lg-3 col-md-6 col-sm-12 box last-box"></div>
+    </div>
+</div>-->
+
+<script>
+    async function setUsername() {
+        const username = document.getElementById('username')
+        const user_email = document.getElementById('user_email')
+
+        const result = await fetch('/api/get-username', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                token: localStorage.getItem('token')
+            })
+        }).then(res => res.json())
+
+        console.log(result)
+
+        if (result.status === 'ok') {
+            username.innerHTML = result.username
+            user_email.innerHTML = result.email
+        }
+    }
+
+    setUsername()
+</script>

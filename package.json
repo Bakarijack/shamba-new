@@ -1,0 +1,28 @@
+{
+  "name": "shamba2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.3.0",
+    "bcryptjs": "^2.4.3",
+    "billboard.js": "^3.7.0-next.3",
+    "chart.js": "^4.2.1",
+    "cookie-parser": "^1.4.6",
+    "ethers": "^6.1.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.2",
+    "font-awesome": "^4.7.0",
+    "handlebars-pdf": "^1.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.2.0",
+    "node-localstorage": "^2.2.1",
+    "sweetalert2": "^11.7.3",
+    "web3": "^1.8.2"
+  }
+}

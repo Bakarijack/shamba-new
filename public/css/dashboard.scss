@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,
+::after,
+::before {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    max-width: 100%;
+    margin: 0 100px;
+    font-family: poppins;
+}
+
+.container {
+    max-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    position: fixed;
+    height: 100px;
+}
+
+.navigation {
+    flex-direction: column;
+    display: flex;
+    width: 200px;
+    position: fixed;
+}
+
+button {
+    align-items: flex-start;
+    border: none;
+    margin: 25px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #001aff;
+    font-weight: bold;
+    font-size: 16px;
+    gap: 10px;
+    white-space: normal;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #7c85d2;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    // background-size: cover;
+    // position: relative;
+}
+
+.register-land,
+.transfer-land,
+.log-out {
+    form {
+        gap: 10px;
+    }
+    input {
+        width: 350px;
+        height: 49px;
+        padding: 10px;
+        color: #001aff;
+        font-size: 16px;
+    }
+    input[type="submit"],
+    #logOut {
+        width: 192px;
+        height: 49px;
+        color: white;
+        background-color: #001aff;
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 25px;
+    }
+    textarea {
+        width: 350px;
+        padding: 10px;
+        color: #001aff;
+        font-size: 16px;
+    }
+    input[type="button"] {
+        width: 192px;
+        height: 49px;
+    }
+    #cancel {
+        border: solid 2px #001aff;
+        // background-color: #7c85d2;
+        border-radius: 10px;
+        color: #001aff;
+        background-color: transparent;
+    }
+}
+
+.log-out {
+    visibility: hidden;
+}
+
+.log-out-btn {
+    white-space: 50px;
+}
+
+.log-out-visible {
+    visibility: visible;
+    transform: translate(50%, 50%) scale(1);
+    margin: 0 250px;
+    border: #001aff solid 2px;
+    padding: 50px;
+    background-color: #7c85d2;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    margin-top: 0;
+    top: 0;
+    z-index: 999;
+    position: absolute;
+}
+
+.home-visible {
+    visibility: visible;
+    top: 0;
+    position: relative;
+    background-size: cover;
+    font-size: 20px;
+    margin-top: 0;
+    top: 0;
+    z-index: 999;
+    position: absolute;
+    border: #001aff solid 2px;
+    top: 12%;
+    right: 10%;
+}
+
+.home {
+    visibility: hidden;
+}
+
+.register-land {
+    visibility: hidden;
+}
+
+.header {
+    visibility: hidden;
+}
+
+.transfer-land {
+    visibility: hidden;
+}
+
+.profile {
+    visibility: hidden;
+}

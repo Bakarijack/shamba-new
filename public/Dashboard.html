@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <script src="/js/dashboard.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span><img src="/images/HeroImage (1)/logo.svg" alt="logo"></span>
+            <span id="Accounts">
+                <img src="/images/Icons2/material-symbols_person-3Icons.svg" alt="Profile">
+                <p>Name </p>
+            </span>
+        </div>
+        <div class="content">
+            <div class="navigation">
+                <button id="home-btn"><img src="/images/Icons2/ic_round-homeIcons.svg">Home</button>
+                <button id="register-btn"><img src="/images/Icons2/material-symbols_add-circleadd.svg">Register
+                    Land</button>
+                <button id="transfer-btn"><img src="/images/Icons2/mdi_file-transferIcons.svg">Transfer Land</button>
+                <button id="profile-btn"><img src="/images/Icons2/material-symbols_person-3Icons.svg">Profile</button>
+                <button id="logout-btn" onclick="revealLogOut()"><img src="/images/Icons2/mdi_logoutIcons.svg">Log
+                    Out</button>
+            </div>
+            <div class="content-area">
+                <div class="home" id="home">
+                    <div class="no-items">
+                        <p>Hello</p>
+                        <img src="/images/HeroImage (1)/bi_emoji-frowndisturbed.svg" alt="no details" srcset="">
+                        <p>It seams you have not registered land, click on register land</p>
+                    </div>
+                    <div class="items-available">
+                        <p><strong>Land Name:</strong></p>
+                        <p>Land Size:</p>
+                        <p>Land Description:</p>
+                    </div>
+                </div>
+                <div class="register-land">
+                    <form action="" method="post">
+                        <Label>Land Number:</Label><br>
+                        <input type="text"><br>
+                        <label for="">Land Size:</label><br>
+                        <input type="number"><br>
+                        <label for="">Land Description:</label><br>
+                        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+                <div class="transfer-land">
+                    <form action="" method="post">
+                        <label for="">Land Number:</label><br>
+                        <input type="text"><br>
+                        <label for="">Land Size:</label><br>
+                        <input type="number"><br>
+                        <label for="">Reason For Transfer:</label><br>
+                        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                        <input type="submit" value="Transfer">
+                    </form>
+                </div>
+                <div class="profile">
+                    <p><strong>Name:</strong></p>
+                </div>
+                <div class="log-out" id="LogOut">
+                    <p>Are You sure You want To Log Out?</p>
+                    <div class="log-out-btn">
+                        <input type="button" value="Cancel" id="cancel" onclick="removeLogout()">
+                        <a href="/"><input type="button" value="Log Out" id="logOut"></a>
+                    </div>
+                </div>
+            </div>
+        </div>.
+    </div>
+    <script>
+        contentArea = document.getElementsByClassName('content');
+        console.log(contentArea)
+        /*HOME*/
+        home = document.getElementById('home-btn');
+        homeDetails = document.getElementById('home');
+        home.addEventListener('click', homeInfo);
+
+        function homeInfo() {
+            homeDetails.classList.remove('home');
+            homeDetails.classList.add('home-visible')
+            console.log("home")
+        }
+
+
+        /*PROFILE*/
+        profile = document.getElementById('profile-btn');
+        profile.addEventListener('click', revealProfile)
+
+        function revealProfile() {
+            console.log("clicked");
+        }
+        /*REGISTER LAND*/
+        registerLand = document.getElementById('register-btn');
+        registerLand.addEventListener('click', regLand);
+
+        function regLand() {
+            console.log('Land registered');
+
+        }
+
+        /*TRANSFER LAND*/
+
+        transfer = document.getElementById('transfer-btn');
+        transfer.addEventListener('click', landTransfer);
+
+        function landTransfer() {
+            console.log("land transfered");
+        }
+
+        /* LOG OUT*/
+        logOut = document.getElementById('logout-btn');
+        log_out = document.getElementById('LogOut');
+        logOut.addEventListener('click', revealLogOut)
+
+        function revealLogOut() {
+            //log_out = document.getElementsByClassName('log-out');
+            log_out.classList.add("log-out-visible");
+            console.log("effected")
+        }
+
+        function removeLogout() {
+            cancel = document.getElementById('cancel');
+            log_out.classList.remove('log-out-visible');
+            homeDetails.classList.add('home');
+        }
+    </script>
+</body>
+
+</html>

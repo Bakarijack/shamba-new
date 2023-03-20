@@ -1,0 +1,82 @@
+.lp-header{
+    margin-top: 2em;
+    font-weight: bold;    
+}
+
+.search-div{
+    margin-left: 0;
+}
+
+/* styles for the search */
+.form{
+
+    position: relative;
+    margin-left: 300px;
+}
+
+.form .fa-search{
+    position: absolute;
+    top:1em;
+    left: 1em;
+    color: #9ca3af;
+}
+
+.form span{
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+    padding: 0.2em;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan{
+    padding-left: 0.4em;
+}
+
+.left-pan i{
+   padding-left: 0.5em;
+}
+
+.form-input{
+    height: 2.7em;
+    text-indent: 2em;
+    border-radius: 10px;
+}
+
+.form-input:focus{
+    box-shadow: none;
+    border:none;
+}
+  /* end */
+
+.land-item{
+    margin-top: 2em;
+}
+
+ul > .num{
+    padding: 0.3em 1em;
+}
+.left-bottom a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.left-bottom a:hover{
+color: blue;
+}
+
+.left-bottom a i{
+    font-size: 30px;
+}
+
+.left-bottom a i:hover{
+    color: blue;
+}
+.setting-div i{
+    font-size: 30px;
+}

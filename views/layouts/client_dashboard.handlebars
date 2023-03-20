@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/client_dashboard.css">
+    <link rel="stylesheet" href="css/client_home.css">
+    <link rel="stylesheet" href="css/register_land.css">
+    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/fontawesome/css/solid.css" rel="stylesheet">
+    <script src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid dash-main">
+        <div class="container left-menu">
+            <a href="#" class="mt-3"><img src="/img/logo.svg" class="dash-logo"></a>
+            <div class="container left-bottom">
+                <a href='/client-dashboard'><i class="fa fa-home btn" id="home-btn" aria-hidden="true"></i></a>
+                <a href='/register-land'><i class="fa fa-file-upload btn" id="add-land" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-file-clipboard btn" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-file-export btn" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-file-edit btn" aria-hidden="true"></i></a>
+            </div>
+            <div class="container setting-div">
+                <a href=""><i class="fa fa-cog btn" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="container-fluid center-content">
+            {{>register_land}}
+        </div>
+
+        <div class="container right-menu">
+            <div class="container top-div">
+                <span>
+                    {{!-- <input type="text" class="search-engine"> --}}
+                    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                </span>
+                <i class='fa fa-bell'></i>
+                <span><img src="/img/day.jpg" class="profile-pic"></span>
+            </div>
+
+            <div class="container bottom-div">
+                <div class="container bottom-div-1"></div>
+                <div class="container bottom-div-2"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+@import url('../../node_modules/font-awesome/css/font-awesome.min.css');
+
+
+.login-div{
+    margin-top: 10em;
+}
+
+.login-header{
+    margin-bottom: 2.8em;
+    font-weight: bold;
+    
+}
+
+.f_pass_link{
+    text-decoration: none;
+}
+
+.line-b{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 1em 0 2em;
+}
+
+.line-b-div{
+    margin-top: 1em;
+}
+
+.line-span{
+    background: #fff;
+    padding: 0 1em;
+}
+
+.line-span ,.invitation{
+    font-weight: bold;
+    font-size: 30px;
+}

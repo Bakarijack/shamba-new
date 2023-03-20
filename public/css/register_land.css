@@ -1,0 +1,29 @@
+.register-header{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+.form-section{
+    margin-top: 3em;
+}
+
+.sub-header{
+    margin-left: 1.5em;
+    margin-bottom: 2em;
+    margin-right: 1em;
+    background-color: white;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+}
+
+.section-header{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+.latter{
+    font-size: 1.2rem;
+    margin-left: 1em;
+}

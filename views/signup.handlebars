@@ -1,0 +1,111 @@
+<div class="container login-div">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="alert" id="alertDiv">
+            </div>
+            <h1 class="login-header">Sign up</h1>
+            <form id="signup_form">
+                <div class="form-group mt-2">
+                    <label for="user_mail" class="control-label">Username</label>
+                    <div>
+                        <input type="text" class="form-control" required id="username" name="username">
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="user_mail" class="control-label">Email</label>
+                    <div>
+                        <input type="email" class="form-control" required id="user_email" name="user_email">
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="password" class="control-label">Password</label>
+                    <div>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="password" class="control-label">Confirm Password</label>
+                    <div>
+                        <input type="password" class="form-control" id="c_password" name="c_password" required>
+                    </div>
+                </div>
+                <div class="form-group mt-5">
+                    <div>
+                        <button class="col-lg-12 col-md-12 col-sm-12 btn btn-success" type="submit">Register</button>
+                    </div>
+                </div>
+                <div class="line-b-div">
+
+                    <div>
+                        <span class="invitation">Existing user ? </span><a class="f_pass_link link-primary"
+                            href="/login">click to login</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12"></div>
+
+    </div>
+</div>
+
+
+<script>
+    const alertDiv1 = document.getElementById('alertDiv')
+    alertDiv1.style.visibility = 'hidden'
+
+    const signup_form = document.getElementById('signup_form')
+    signup_form.addEventListener('submit', signUpUser)
+
+    async function signUpUser(event) {
+        event.preventDefault()
+
+        const username = document.getElementById('username').value
+        const user_email = document.getElementById('user_email').value
+        const password = document.getElementById('password').value
+        const c_password = document.getElementById('c_password').value
+
+        const result = await fetch('/api/signup/process', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                username,
+                user_email,
+                password,
+                c_password
+            })
+        }).then(res => res.json())
+
+        if (result.status === 'ok') {
+            displayMessage("alert-success", result.message);
+            document.getElementById('username').value = ''
+            document.getElementById('user_email').value = ''
+            document.getElementById('password').value = ''
+            document.getElementById('c_password').value = ''
+
+            setTimeout(() => {
+                document.location = '/login'
+            }, 1000)
+
+        } else if (result.status === 'error') {
+            displayMessage("alert-danger", result.message);
+            document.getElementById('password').value = ''
+            document.getElementById('c_password').value = ''
+        }
+
+    }
+
+    function displayMessage(alertClass, message) {
+        const alertDiv = document.getElementById('alertDiv');
+        alertDiv.style.visibility = 'visible'
+        alertDiv.classList.add(alertClass);
+        alertDiv.innerHTML = message;
+
+        setTimeout(() => {
+            alertDiv.style.visibility = 'hidden'
+            alertDiv.classList.remove(alertClass);
+        }, 2000)
+
+    }
+</script>

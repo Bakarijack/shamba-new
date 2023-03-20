@@ -1,0 +1,29 @@
+.top-welcome{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+}
+
+.user-name{
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.div-box{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.box{
+    border-radius: 20px;
+    background-color: white;
+    padding: 0.5em 0.5em;
+    height: 4em;
+    
+}
+
+#home-btn :invalid{
+    height: 100px;
+} 
